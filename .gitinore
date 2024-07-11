@@ -215,10 +215,10 @@ UpgradeLog*.htm
 *.mdf
 *.ldf
 
-venv
-env
-venv
-Env
+/venv/
+/env/
+/Venv/
+/Env/
 
 # Business Intelligence projects
 *.rdl.data
