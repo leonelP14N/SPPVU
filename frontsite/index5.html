@@ -1,0 +1,287 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Evaluation Form with Images</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <form id="car-form">
+                <div class="formbold-steps">
+                    <ul>
+                        <li class="formbold-step-menu1 active">
+                            <span>1</span>
+                            Características
+                        </li>
+                        <li class="formbold-step-menu2">
+                            <span>2</span>
+                            Imagens
+                        </li>
+                        <li class="formbold-step-menu3">
+                            <span>3</span>
+                            Avaliação
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formbold-form-step-1 active">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="marca" class="formbold-form-label"> Marca </label>
+                            <select id="marca" name="marca" class="formbold-form-input" required>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Honda">Honda</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="modelo" class="formbold-form-label"> Modelo </label>
+                            <input type="text" name="modelo" placeholder="EXEMPLO" id="modelo" class="formbold-form-input" required/>
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="transmissao" class="formbold-form-label">Transmissão</label>
+                            <select id="transmissao" name="transmissao" class="formbold-form-input" required>
+                                <option value="Automática">Automática</option>
+                                <option value="Manual">Manual</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="combustivel" class="formbold-form-label">Tipo de Combustível</label>
+                            <select id="combustivel" name="combustivel" class="formbold-form-input" required>
+                                <option value="Gasolina">Gasolina</option>
+                                <option value="Diesel">Diesel</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="ano" class="formbold-form-label">Ano</label>
+                            <input type="number" id="ano" name="ano" class="formbold-form-input" required>
+                        </div>
+                        <div>
+                            <label for="quilometragem" class="formbold-form-label">Quilometragem</label>
+                            <input type="number" id="quilometragem" name="quilometragem" class="formbold-form-input" required>
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="moto_size" class="formbold-form-label">Tamanho do Motor</label>
+                            <input type="number" id="moto_size" name="moto_size" class="formbold-form-input" step="0.1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-2">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="image1" class="formbold-form-label"> Frente </label>
+                            <input type="file" id="image1" name="image1" accept="image/*"><br>
+                        </div>
+                        <div>
+                            <label for="image2" class="formbold-form-label"> Traseira </label>
+                            <input type="file" id="image2" name="image2" accept="image/*"><br>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="image3" class="formbold-form-label"> Lateral Esquerda </label>
+                            <input type="file" id="image3" name="image3" accept="image/*"><br>
+                        </div>
+                        <div>
+                            <label for="image4" class="formbold-form-label"> Lateral Direita </label>
+                            <input type="file" id="image4" name="image4" accept="image/*"><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-3">
+                    <div class="formbold-form-confirm">
+                        <p>
+                            De acordo com as características do seu veículo, o preço previsto é de <span id="preco-previsto"></span>.
+                        </p>
+                        <p id="preco-previsto"></p>
+                        <p style="color: red;">
+                            Esta previsão representa uma estimativa aproximada do valor real do carro. Para uma avaliação mais profunda, considere consultar um mecânico para verificar questões mecânicas.
+                        </p>
+
+                        <div>
+                            <button type="button" id="nova-avaliacao" class="formbold-confirm-btn active">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC" />
+                                    <g clip-path="url(#clip0_1667_1314)">
+                                        <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1667_1314">
+                                            <rect width="14" height="14" fill="white" transform="translate(4 4)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Nova Avaliação
+                            </button>
+                            
+                                
+                            </button>
+
+                            <button type="button" class="formbold-confirm-btn">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC" />
+                                    <g clip-path="url(#clip0_1667_1314)">
+                                        <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1667_1314">
+                                            <rect width="14" height="14" fill="white" transform="translate(4 4)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-btn-wrapper">
+                    <button type="button" class="formbold-back-btn">
+                        Voltar
+                    </button>
+
+                    <button type="submit" id="submit-btn" class="formbold-btn">
+                        Próximo Passo
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1675_1807)">
+                                <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1675_1807">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variáveis para manipulação do DOM
+            const form = document.getElementById('car-form');
+            const steps = document.querySelectorAll('.formbold-steps ul li');
+            const stepContents = document.querySelectorAll('.formbold-form-step-1, .formbold-form-step-2, .formbold-form-step-3');
+            const precoPrevistoElement = document.getElementById('preco-previsto');
+            const submitBtn = document.getElementById('submit-btn');
+            const novaAvaliacaoBtn = document.getElementById('nova-avaliacao');
+            let currentStep = 0;
+    
+            // Função para avançar para o próximo passo
+            function nextStep() {
+                if (currentStep < steps.length - 1) {
+                    steps[currentStep].classList.remove('active');
+                    stepContents[currentStep].classList.remove('active');
+                    currentStep++;
+                    steps[currentStep].classList.add('active');
+                    stepContents[currentStep].classList.add('active');
+    
+                    // Alterar o texto do botão na última etapa
+                    if (currentStep === steps.length - 1) {
+                        submitBtn.textContent = 'Avaliar';
+                    }
+                }
+            }
+    
+            // Função para voltar ao passo anterior
+            function previousStep() {
+                if (currentStep > 0) {
+                    steps[currentStep].classList.remove('active');
+                    stepContents[currentStep].classList.remove('active');
+                    currentStep--;
+                    steps[currentStep].classList.add('active');
+                    stepContents[currentStep].classList.add('active');
+    
+                    // Alterar o texto do botão de volta ao padrão se não estiver na última etapa
+                    if (currentStep < steps.length - 1) {
+                        submitBtn.textContent = 'Próximo Passo';
+                    }
+                }
+            }
+    
+            // Manipulação dos botões "Próximo Passo" e "Voltar"
+            document.querySelector('.formbold-btn').addEventListener('click', function() {
+                if (currentStep === steps.length - 2) {
+                    // Se estiver na penúltima etapa, muda o texto do botão para 'Avaliar'
+                    submitBtn.textContent = 'Avaliar';
+                }
+                nextStep();
+            });
+            
+            document.querySelector('.formbold-back-btn').addEventListener('click', previousStep);
+    
+            // Envio do formulário para a API somente na última etapa
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita o envio padrão do formulário
+    
+                if (currentStep === steps.length - 1) {
+                    // Captura os dados necessários do formulário
+                    const data = {
+                        marca: form.elements['marca'].value,
+                        modelo: form.elements['modelo'].value,
+                        transmissao: form.elements['transmissao'].value,
+                        combustivel: form.elements['combustivel'].value,
+                        ano: parseInt(form.elements['ano'].value, 10),
+                        quilometragem: parseInt(form.elements['quilometragem'].value, 10),
+                        moto_size: parseFloat(form.elements['moto_size'].value)
+                    };
+    
+                    // Envio dos dados para a API
+                    fetch('http://127.0.0.1:5000/prever_preco', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Atualiza o valor previsto no DOM
+                        precoPrevistoElement.textContent = `De acordo com as características do seu veículo, o preço previsto é de ${preco} KZ.`;
+    
+                        // Altera o texto do botão "Avaliar" para "Nova Avaliação"
+                        submitBtn.textContent = 'Nova Avaliação';
+    
+                        // Avança para a última etapa automaticamente
+                        while (currentStep < 2) {
+                            nextStep();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                    });
+                }
+            });
+    
+            // Manipulação do botão "Nova Avaliação"
+            novaAvaliacaoBtn.addEventListener('click', function() {
+                form.reset();
+                currentStep = 0; // Voltar para o passo inicial
+                steps.forEach(step => step.classList.remove('active'));
+                stepContents.forEach(content => content.classList.remove('active'));
+                steps[0].classList.add('active');
+                stepContents[0].classList.add('active');
+                submitBtn.textContent = 'Próximo Passo';
+            });
+        });
+    </script>
+    
+</body>
+</html>

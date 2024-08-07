@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Evaluation Form with Images</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
@@ -14,7 +16,7 @@
                     <ul>
                         <li class="formbold-step-menu1 active">
                             <span>1</span>
-                            Caracteristicas 
+                            Caracteristicas
                         </li>
                         <li class="formbold-step-menu2">
                             <span>2</span>
@@ -26,75 +28,99 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="formbold-form-step-1 active">
                     <div class="formbold-input-flex">
                         <div>
-                            <label for="firstname" class="formbold-form-label"> First name </label>
-                            <input type="text" name="firstname" placeholder="Andrio" id="firstname"
-                                class="formbold-form-input" />
+                            <label for="marca" class="formbold-form-label"> Marca </label>
+                            <select id="marca" name="marca" class="formbold-form-input" required>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Honda">Honda</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="lastname" class="formbold-form-label"> Last name </label>
-                            <input type="text" name="lastname" placeholder="Dolee" id="lastname"
+                            <label for="modelo" class="formbold-form-label"> Modelo </label>
+                            <input type="text" name="modelo" placeholder="EXEMPLO" id="lastname"
                                 class="formbold-form-input" />
                         </div>
                     </div>
-    
                     <div class="formbold-input-flex">
                         <div>
-                            <label for="dob" class="formbold-form-label"> Date of Birth </label>
-                            <input type="date" name="dob" id="dob" class="formbold-form-input" />
+                            <label for="transmissao">Transmissão</label>
+                            <select id="transmissao" name="transmissao" class="formbold-form-input" required>
+                                <option value="Automática">Automática</option>
+                                <option value="Manual">Manual</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="email" class="formbold-form-label"> Email Address </label>
-                            <input type="email" name="email" placeholder="example@mail.com" id="email"
-                                class="formbold-form-input" />
+                            <label for="combustivel">Tipo de Combustível</label>
+                            <select id="combustivel" name="combustivel" class="formbold-form-input" required>
+                                <option value="Gasolina">Gasolina</option>
+                                <option value="Diesel">Diesel</option>
+                            </select>
                         </div>
                     </div>
-    
-                    <div>
-                        <label for="address" class="formbold-form-label"> Address </label>
-                        <input type="text" name="address" id="address"
-                            placeholder="Flat 4, 24 Castle Street, Perth, PH1 3JY" class="formbold-form-input" />
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="ano">Ano</label>
+                            <input type="number" id="ano" name="ano" class="formbold-form-input" required>
+                        </div>
+                        <div>
+                            <label for="quilometragem">Quilometragem</label>
+                            <input type="number" id="quilometragem" name="quilometragem" class="formbold-form-input"
+                                required>
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="moto_size">Tamanho do Motor</label>
+                            <input type="number" id="moto_size" name="moto_size" class="formbold-form-input" required>
+                        </div>
+                        <div>
+                            <label for="ano">Cor</label>
+                            <input type="text" id="cor" name="cor" class="formbold-form-input" required>
+                        </div>
                     </div>
                 </div>
-    
+
                 <div class="formbold-form-step-2">
-                    <div>
-                        <label for="message" class="formbold-form-label"> Message </label>
-                        <textarea rows="6" name="message" id="message" placeholder="Type your message"
-                            class="formbold-form-input"></textarea>
-                    </div>
                     <div class="formbold-input-flex">
                         <div>
-                            <label for="firstname" class="formbold-form-label"> First name </label>
+                            <label for="f irstname" class="formbold-form-label"> Frente </label>
                             <input type="file" id="image1" name="image1" accept="image/*" required><br>
                         </div>
                         <div>
-                            <label for="lastname" class="formbold-form-label"> Last name </label>
+                            <label for="lastname" class="formbold-form-label"> Trazerira </label>
                             <input type="file" id="image1" name="image1" accept="image/*" required><br>
                         </div>
                     </div>
-    
+
                     <div class="formbold-input-flex">
                         <div>
-                            <label for="dob" class="formbold-form-label"> Date of Birth </label>
+                            <label for="dob" class="formbold-form-label"> Lateral Esquerda </label>
                             <input type="file" id="image1" name="image1" accept="image/*" required><br>
                         </div>
                         <div>
-                            <label for="email" class="formbold-form-label"> Email Address </label>
+                            <label for="email" class="formbold-form-label"> Lateral Direita </label>
                             <input type="file" id="image1" name="image1" accept="image/*" required><br>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="formbold-form-step-3">
                     <div class="formbold-form-confirm">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                            De acordor com as Caracteristicas do seu veículo, o preço previsto para o seu veículo de de 15.000.200,99 KZ.
                         </p>
-    
+                        <p style="color: red;">
+                            Redirecionar para os termos de utilização ou mencionar o termo aqui. EXEMPLO: "Lembre-te está previsão representa uma estimava próximo ao valor real do carro, para uma avaliação mais profunda há também a atenção as questões mecanicas por isso deve-se consultar a um mecânico"
+                        </p>
+
                         <div>
                             <button class="formbold-confirm-btn active">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -113,7 +139,7 @@
                                 </svg>
                                 Yes! I want it.
                             </button>
-    
+
                             <button class="formbold-confirm-btn">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -134,12 +160,12 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="formbold-form-btn-wrapper">
                     <button class="formbold-back-btn">
                         Back
                     </button>
-    
+
                     <button class="formbold-btn">
                         Next Step
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,4 +187,5 @@
     </div>
     <script src="js/style.js"></script>
 </body>
+
 </html>
