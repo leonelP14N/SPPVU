@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Preço de Carro</title>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("../asset/img/bg1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão de Preço de Carro</h1>
+        <form id="car-form">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" list="marcas" required>
+            <datalist id="marcas">
+                <option value="Toyota">
+                <option value="Ford">
+                <option value="Chevrolet">
+                <option value="Honda">
+                <option value="BMW">
+                <option value="Mercedes-Benz">
+            </datalist>
+
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="transmissao">Transmissão</label>
+            <input type="text" id="transmissao" name="transmissao" list="transmissoes" required>
+            <datalist id="transmissoes">
+                <option value="Automática">
+                <option value="Manual">
+                <option value="CVT">
+                <option value="DCT">
+            </datalist>
+
+            <label for="combustivel">Tipo de Combustível</label>
+            <input type="text" id="combustivel" name="combustivel" list="combustiveis" required>
+            <datalist id="combustiveis">
+                <option value="Gasolina">
+                <option value="Diesel">
+                <option value="Elétrico">
+                <option value="Híbrido">
+            </datalist>
+
+            <label for="ano">Ano</label>
+            <input type="number" id="ano" name="ano" required>
+
+            <label for="quilometragem">Quilometragem</label>
+            <input type="number" id="quilometragem" name="quilometragem" required>
+
+            <label for="moto_size">Tamanho do Motor</label>
+            <input type="number" step="0.1" id="moto_size" name="moto_size" list="moto_sizes" required>
+            <datalist id="moto_sizes">
+                <option value="1.0">
+                <option value="1.5">
+                <option value="2.0">
+                <option value="2.5">
+                <option value="3.0">
+            </datalist>
+
+            <div class="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
+                <select class="text-sm outline-none rounded-lg h-full">
+                    <option>US</option>
+                    <option>ES</option>
+                    <option>MR</option>
+                </select>
+            </div>
+
+            <button type="submit">Prever Preço</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('car-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const data = {
+                marca: document.getElementById('marca').value,
+                modelo: document.getElementById('modelo').value,
+                transmissao: document.getElementById('transmissao').value,
+                combustivel: document.getElementById('combustivel').value,
+                ano: document.getElementById('ano').value,
+                quilometragem: document.getElementById('quilometragem').value,
+                moto_size: document.getElementById('moto_size').value,
+            };
+
+            fetch('/prever_preco', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = '<h3>Preço Previsto: ' + data.preco_previsto + '</h3>';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

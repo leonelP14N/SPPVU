@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação de Carro</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <form id="carForm">
+                <div class="formbold-steps">
+                    <ul>
+                        <li class="formbold-step-menu1 active">
+                            <span>1</span>
+                            Características
+                        </li>
+                        <li class="formbold-step-menu2">
+                            <span>2</span>
+                            Imagens
+                        </li>
+                        <li class="formbold-step-menu3">
+                            <span>3</span>
+                            Avaliação
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formbold-form-step-1 active">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="marca" class="formbold-form-label"> Marca </label>
+                            <select id="marca" name="marca" class="formbold-form-input" required>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Honda">Honda</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="modelo" class="formbold-form-label"> Modelo </label>
+                            <input type="text" name="modelo" placeholder="EXEMPLO" id="modelo"
+                                class="formbold-form-input" />
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="transmissao">Transmissão</label>
+                            <select id="transmissao" name="transmissao" class="formbold-form-input" required>
+                                <option value="Automática">Automática</option>
+                                <option value="Manual">Manual</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="combustivel">Tipo de Combustível</label>
+                            <select id="combustivel" name="combustivel" class="formbold-form-input" required>
+                                <option value="Gasolina">Gasolina</option>
+                                <option value="Diesel">Diesel</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="ano">Ano</label>
+                            <input type="number" id="ano" name="ano" class="formbold-form-input" required>
+                        </div>
+                        <div>
+                            <label for="quilometragem">Quilometragem</label>
+                            <input type="number" id="quilometragem" name="quilometragem" class="formbold-form-input"
+                                required>
+                        </div>
+                    </div>
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="moto_size">Tamanho do Motor</label>
+                            <input type="number" id="moto_size" name="moto_size" class="formbold-form-input" step="0.1" required>
+                        </div>
+                        <div>
+                            <label for="cor">Cor</label>
+                            <input type="text" id="cor" name="cor" class="formbold-form-input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-2">
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="image1" class="formbold-form-label"> Frente </label>
+                            <input type="file" id="image1" name="image1" accept="image/*" required><br>
+                        </div>
+                        <div>
+                            <label for="image2" class="formbold-form-label"> Traseira </label>
+                            <input type="file" id="image2" name="image2" accept="image/*" required><br>
+                        </div>
+                    </div>
+
+                    <div class="formbold-input-flex">
+                        <div>
+                            <label for="image3" class="formbold-form-label"> Lateral Esquerda </label>
+                            <input type="file" id="image3" name="image3" accept="image/*" required><br>
+                        </div>
+                        <div>
+                            <label for="image4" class="formbold-form-label"> Lateral Direita </label>
+                            <input type="file" id="image4" name="image4" accept="image/*" required><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-step-3">
+                    <div class="formbold-form-confirm">
+                        <p id="preco-previsto">
+                            De acordo com as características do seu veículo, o preço previsto é de 15.000.200,99 KZ.
+                        </p>
+                        <p style="color: red;">
+                            Redirecionar para os termos de utilização ou mencionar o termo aqui. EXEMPLO: "Lembre-se que esta previsão representa uma estimativa próxima ao valor real do carro. Para uma avaliação mais precisa, é aconselhável consultar um mecânico."
+                        </p>
+
+                        <div>
+                            <button id="nova-avaliacao-btn" class="formbold-confirm-btn">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC" />
+                                    <g clip-path="url(#clip0_1667_1314)">
+                                        <path
+                                            d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z"
+                                            fill="#536387" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1667_1314">
+                                            <rect width="14" height="14" fill="white" transform="translate(4 4)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Nova Avaliação
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formbold-form-btn-wrapper">
+                    <button type="button" id="back-btn" class="formbold-back-btn">
+                        Voltar
+                    </button>
+
+                    <button type="submit" id="submit-btn" class="formbold-btn">
+                        Avaliar
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1675_1807)">
+                                <path
+                                    d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1675_1807">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('carForm');
+        const submitBtn = document.getElementById('submit-btn');
+        const precoPrevistoElement = document.getElementById('preco-previsto');
+        const novaAvaliacaoBtn = document.getElementById('nova-avaliacao-btn');
+        const steps = document.querySelectorAll('.formbold-steps ul li');
+        const stepContents = document.querySelectorAll('.formbold-form-step');
+        
+
+        let currentStep = 0;
+
+        function showPredictionResult(preco) {
+            precoPrevistoElement.textContent = `De acordo com as características do seu veículo, o preço previsto é de ${preco} KZ.`;
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch('http://localhost:5000/prever_preco', {
+                method: 'POST',
+                body: JSON.stringify({
+                    marca: formData.get('marca'),
+                    modelo: formData.get('modelo'),
+                    transmissao: formData.get('transmissao'),
+                    combustivel: formData.get('combustivel'),
+                    ano: formData.get('ano'),
+                    quilometragem: formData.get('quilometragem'),
+                    moto_size: parseFloat(formData.get('moto_size'))
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                showPredictionResult(data.preco_previsto.toFixed(2));
+                showStep(2); // Mudar para a aba de avaliação após receber o resultado
+            })
+            .catch(error => {
+                console.error('Erro ao enviar os dados para a API:', error);
+            });
+        }
+
+        function showStep(stepIndex) {
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', index === stepIndex);
+                stepContents[index].classList.toggle('active', index === stepIndex);
+            });
+            currentStep = stepIndex;
+        }
+
+        function handleBackButton() {
+            if (currentStep > 0) {
+                showStep(currentStep - 1);
+            }
+        }
+
+        function handleNovaAvaliacao() {
+            form.reset();
+            showStep(0);
+        }
+
+        form.addEventListener('submit', handleFormSubmit);
+        document.getElementById('back-btn').addEventListener('click', handleBackButton);
+        novaAvaliacaoBtn.addEventListener('click', handleNovaAvaliacao);
+
+        // Inicializar na primeira etapa
+        showStep(0);
+    </script>
+</body>
+</html>
+
