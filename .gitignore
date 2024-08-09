@@ -1,0 +1,28 @@
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+ENV/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Database
+*.sqlite3
+
+# SQL Server files
+*.mdf
+*.ldf
+
+/venv/
+/env/
+/Venv/
+/Env/
